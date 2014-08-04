@@ -14,6 +14,18 @@ var wizard = {
 		    });
 		    $(this).find('.equalize').css('height',h + 'px');
 		});
+	},
+	tabs: function() {
+		$('.tabs a').click(function(e) {
+  			if(!$(this).hasClass('active')) {
+  				var ind = $(this).index();
+  				//remove old active classes
+  				$(this).closest('.tabs-tabs').find('.active').removeClass('active');
+  				$(this).closest('.tabs').find('.tabs-content .active').removeClass('active');
+  				$(this).addClass('active');
+  				$(this).closest('.tabs').find('.tabs-content li[nth-child="' + ind+1 + '"]').addClass('active');
+  			}
+		});
 	}
 }
 
