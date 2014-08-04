@@ -9,7 +9,7 @@
 		<meta charset="utf-8" />
 		<title>Wizard - Test</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		<link rel="stylesheet" media="screen, print" href="normalize.css" />
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 		<link rel="stylesheet" media="screen, print" href="common.css" />
 	</head>
 	<body>
@@ -17,47 +17,70 @@
 			<section class="popover">
 				<div class="close"></div>
 				<h1>Asset Detail</h1>
-				<div class="equaliser">
+				<div class="equalizer">
 					<section class="panel unit-2-3">
 						<h2 class="panel-heading">New Product</h2>
-						<section class="panel-content">
-							<img src="http://www.placehold.it/400x275" />
-							<strong>New Product</strong>
+						<section class="panel-content bordered equalize">
+							<img class="full-width" src="img/image-1.png" />
 						</section>
 					</section>
-					<section class="panel unit-1-3">
+					<section class="panel unit-1-3 shadow rounded">
 						<h2 class="panel-heading">Grouped Assets</h2>
-						<section class="panel-content">
-							<ul class="gallery">
-								<li><img src="http://www.placehold.it/80x75" class="active" /></li>
-								<li><img src="http://www.placehold.it/80x75"/></li>
+						<section class="panel-content equalize">
+							<ul class="gallery no-list">
+								<li class="unit-1-2"><img src="http://www.placehold.it/80x75" class="active" /></li>
+								<li class="unit-2-2"><img src="http://www.placehold.it/80x75"/></li>
 							</ul>
 							<button class="sticky-bottom blue">Add an asset to this Group</button>
 						</section>
 					</section>
 				</div>
-				<div class="equaliser">
-					<section class="panel tabs unit-2-3">
-						<ul class="tabs-tabs">
-							<li><a href="#">Information/Keywords</a></li>
-							<li><a href="#">Description</a></li>
-							<li><a href="#">Product Info</a></li>
-							<li><a class="active" href="#">Stakeholders</a></li>
-							<li><a href="#">Useage</a></li>
-						</ul>
-						<ul class="tabs-content">
-							<li>Tab 1</li>
-							<li>Tab 2</li>
-							<li>Tab 3</li>
-							<li class="active">
-
-							</li>
-							<li>Tab 5</li>
-						</ul>
+				<div class="equalizer">
+					<section class="panel tabs unit-2-3 rounded">
+						<div class="tabs equalize">
+							<ul class="tabs-tabs no-list">
+								<li><a href="#">Information/Keywords</a></li>
+								<li><a href="#">Description</a></li>
+								<li><a href="#">Product Info</a></li>
+								<li><a class="active" href="#">Stakeholders</a></li>
+								<li><a href="#">Usage</a></li>
+							</ul>
+							<br class="clear">
+							<ul class="tabs-content no-list shadow">
+								<li>Tab 1</li>
+								<li>Tab 2</li>
+								<li>Tab 3</li>
+								<li class="active">
+								    <form>
+										<div class="unit-1-2">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+										</div>
+										<div class="unit-2-2">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+											<label>Agency:</label><input type="text">
+										</div>
+									</form>
+								</li>
+								<li>Tab 5</li>
+							</ul>
+						</div>
 					</section>
-					<section class="panel unit-1-3">
+					<section class="panel unit-1-3 shadow rounded equalize">
 						<h2 class="panel-heading">Asset Actions</h2>
-						<section class="panel-content">
+						<section class="panel-content collapse">
+							<a href="#" class="control"><span class="icon-download"></span>Download this Asset</a>
+							<a href="#" class="control"><span class="icon-basket"></span>Add Asset to Basket</a>
+							<a href="#" class="control"><span class="icon-basket"></span>Add Grouped Assets to Basket</a>
+							<a href="#" class="control"><span class="icon-star"></span>Add Asset to My Favourites</a>
+							<a href="#" class="control"><span class="icon-link"></span>View all Linked Assets (4)</a>
+							<a href="#" class="control"><span class="icon-wrench"></span>Modify Asset</a>
 						</section>
 					</section>
 				</div>
@@ -68,7 +91,7 @@
 	<!-- All The Scripts -->
 
 	<!-- JQ -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<!-- Common -->
 	<script src="common.js"></script>
 

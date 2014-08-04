@@ -1,6 +1,11 @@
 var wizard = {
 	init: function() {
+		$this = this;
 		this.equalize();
+		this.tabs();
+		$(window).resize(function() {
+			$this.equalize();
+		});
 	},
 	equalize: function() {
 		$('.equalizer').each(function(k,v) {
@@ -18,12 +23,13 @@ var wizard = {
 	tabs: function() {
 		$('.tabs a').click(function(e) {
   			if(!$(this).hasClass('active')) {
-  				var ind = $(this).index();
+  				var ind = parseInt($(this).closest('li').index());
+  				console.log($(this).closest('.tabs').find('.tabs-content li:nth-child(' + ind+1 + ')'));
   				//remove old active classes
   				$(this).closest('.tabs-tabs').find('.active').removeClass('active');
   				$(this).closest('.tabs').find('.tabs-content .active').removeClass('active');
   				$(this).addClass('active');
-  				$(this).closest('.tabs').find('.tabs-content li[nth-child="' + ind+1 + '"]').addClass('active');
+  				$(this).closest('.tabs').find('.tabs-content li:nth-child(' + (ind+1) + ')').addClass('active');
   			}
 		});
 	}
